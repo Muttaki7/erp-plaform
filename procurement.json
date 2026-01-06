@@ -1,0 +1,42 @@
+{
+    "vendors": [
+        {
+            "id": 1,
+            "name": "Tech Supplies Inc.",
+            "contact": "contact@techsupplies.com",
+            "address": "123 Tech Street",
+            "tenant_id": 1
+        }
+    ],
+    "purchaseOrders": [
+        {
+            "id": 1,
+            "vendor_id": 1,
+            "date": "2023-01-01",
+            "total_amount": 5000,
+            "status": "APPROVED",
+            "tenant_id": 1
+        }
+    ],
+    "purchaseRequests": [
+        {
+            "id": 1,
+            "requester_id": 1,
+            "item_id": 1,
+            "quantity": 10,
+            "date": "2023-01-01",
+            "status": "APPROVED",
+            "tenant_id": 1
+        }
+    ],
+    "invoices": [
+        {
+            "id": 1,
+            "purchase_order_id": 1,
+            "amount": 5000,
+            "date": "2023-01-15",
+            "status": "PAID",
+            "tenant_id": 1
+        }
+    ]
+}

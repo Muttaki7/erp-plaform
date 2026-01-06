@@ -1,0 +1,49 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "Laptop",
+            "quantity": 50,
+            "price": 1000,
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Mouse",
+            "quantity": 200,
+            "price": 20,
+            "tenant_id": 1
+        }
+    ],
+    "stocks": [
+        {
+            "id": 1,
+            "item_id": 1,
+            "warehouse_id": 1,
+            "quantity": 30,
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "item_id": 2,
+            "warehouse_id": 1,
+            "quantity": 150,
+            "tenant_id": 1
+        }
+    ],
+    "warehouses": [
+        {
+            "id": 1,
+            "location": "Main Warehouse",
+            "tenant_id": 1
+        }
+    ],
+    "vendors": [
+        {
+            "id": 1,
+            "name": "Tech Supplies Inc.",
+            "contact": "contact@techsupplies.com",
+            "tenant_id": 1
+        }
+    ]
+}

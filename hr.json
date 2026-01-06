@@ -1,0 +1,57 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "position": "Manager",
+            "salary": 50000,
+            "department_id": 1,
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "position": "Developer",
+            "salary": 40000,
+            "department_id": 2,
+            "tenant_id": 1
+        }
+    ],
+    "leaves": [
+        {
+            "id": 1,
+            "employee_id": 1,
+            "start_date": "2023-07-01",
+            "end_date": "2023-07-05",
+            "type": "Vacation",
+            "status": "APPROVED",
+            "tenant_id": 1
+        }
+    ],
+    "payrolls": [
+        {
+            "id": 1,
+            "employee_id": 1,
+            "month": "July",
+            "year": 2023,
+            "gross_salary": 50000,
+            "deductions": 5000,
+            "net_salary": 45000,
+            "tenant_id": 1
+        }
+    ],
+    "positions": [
+        {
+            "id": 1,
+            "title": "Manager",
+            "department_id": 1,
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "title": "Developer",
+            "department_id": 2,
+            "tenant_id": 1
+        }
+    ]
+}

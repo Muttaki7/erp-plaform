@@ -1,0 +1,71 @@
+{
+    "documents": [
+        {
+            "id": 1,
+            "name": "Employee Handbook",
+            "category_id": 1,
+            "version": "1.0",
+            "owner_id": 1,
+            "file_path": "/documents/handbook.pdf",
+            "created_date": "2023-01-01",
+            "updated_date": "2023-01-01",
+            "status": "ACTIVE",
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Financial Report Q1",
+            "category_id": 2,
+            "version": "1.1",
+            "owner_id": 2,
+            "file_path": "/documents/financial_q1.pdf",
+            "created_date": "2023-04-01",
+            "updated_date": "2023-04-15",
+            "status": "ACTIVE",
+            "tenant_id": 1
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "HR Documents",
+            "description": "Human Resources related documents",
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Financial Documents",
+            "description": "Financial reports and statements",
+            "tenant_id": 1
+        }
+    ],
+    "versions": [
+        {
+            "id": 1,
+            "document_id": 1,
+            "version_number": "1.0",
+            "created_by": 1,
+            "created_date": "2023-01-01",
+            "changes": "Initial version",
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "document_id": 2,
+            "version_number": "1.0",
+            "created_by": 2,
+            "created_date": "2023-04-01",
+            "changes": "Initial version",
+            "tenant_id": 1
+        },
+        {
+            "id": 3,
+            "document_id": 2,
+            "version_number": "1.1",
+            "created_by": 2,
+            "created_date": "2023-04-15",
+            "changes": "Updated financial figures",
+            "tenant_id": 1
+        }
+    ]
+}

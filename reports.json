@@ -1,0 +1,61 @@
+{
+    "reports": [
+        {
+            "id": 1,
+            "name": "Financial Summary Report",
+            "description": "Summary of financial transactions and balances",
+            "type": "FINANCIAL",
+            "created_by": 1,
+            "created_date": "2023-01-01",
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Inventory Status Report",
+            "description": "Current inventory levels and stock movements",
+            "type": "INVENTORY",
+            "created_by": 1,
+            "created_date": "2023-01-01",
+            "tenant_id": 1
+        },
+        {
+            "id": 3,
+            "name": "HR Employee Report",
+            "description": "Employee details and performance metrics",
+            "type": "HR",
+            "created_by": 1,
+            "created_date": "2023-01-01",
+            "tenant_id": 1
+        }
+    ],
+    "dashboards": [
+        {
+            "id": 1,
+            "name": "Executive Dashboard",
+            "description": "High-level overview of key business metrics",
+            "widgets": [
+                {
+                    "id": 1,
+                    "type": "CHART",
+                    "title": "Revenue Trend",
+                    "data_source": "finance.transactions",
+                    "config": {
+                        "chart_type": "line",
+                        "period": "monthly"
+                    }
+                },
+                {
+                    "id": 2,
+                    "type": "METRIC",
+                    "title": "Total Inventory Value",
+                    "data_source": "inventory.items",
+                    "config": {
+                        "aggregation": "sum",
+                        "field": "value"
+                    }
+                }
+            ],
+            "tenant_id": 1
+        }
+    ]
+}

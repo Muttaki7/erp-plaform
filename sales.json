@@ -1,0 +1,79 @@
+{
+    "customers": [
+        {
+            "id": 1,
+            "name": "ABC Corp",
+            "email": "contact@abccorp.com",
+            "phone": "123-456-7890",
+            "address": "123 Main St, City, State",
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "name": "XYZ Ltd",
+            "email": "info@xyzltd.com",
+            "phone": "987-654-3210",
+            "address": "456 Elm St, City, State",
+            "tenant_id": 1
+        }
+    ],
+    "leads": [
+        {
+            "id": 1,
+            "customer_id": 1,
+            "source": "Website",
+            "status": "QUALIFIED",
+            "value": 50000,
+            "created_date": "2023-01-01",
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "customer_id": 2,
+            "source": "Referral",
+            "status": "CLOSED_WON",
+            "value": 30000,
+            "created_date": "2023-02-01",
+            "tenant_id": 1
+        }
+    ],
+    "quotes": [
+        {
+            "id": 1,
+            "lead_id": 1,
+            "items": [
+                {
+                    "id": 1,
+                    "item_id": 1,
+                    "quantity": 10,
+                    "price": 1000,
+                    "discount": 100
+                }
+            ],
+            "total_amount": 9000,
+            "status": "SENT",
+            "valid_until": "2023-12-31",
+            "tenant_id": 1
+        }
+    ],
+    "interactions": [
+        {
+            "id": 1,
+            "lead_id": 1,
+            "type": "EMAIL",
+            "description": "Sent initial proposal",
+            "date": "2023-01-05",
+            "user_id": 1,
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "lead_id": 2,
+            "type": "MEETING",
+            "description": "Discussed requirements",
+            "date": "2023-02-05",
+            "user_id": 2,
+            "tenant_id": 1
+        }
+    ]
+}

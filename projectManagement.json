@@ -1,0 +1,57 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "ERP Implementation",
+            "description": "Implement ERP system for company",
+            "start_date": "2023-01-01",
+            "end_date": "2023-12-31",
+            "status": "IN_PROGRESS",
+            "budget": 100000,
+            "tenant_id": 1
+        }
+    ],
+    "tasks": [
+        {
+            "id": 1,
+            "project_id": 1,
+            "name": "Design Database",
+            "description": "Design the database schema",
+            "assigned_to": 1,
+            "status": "COMPLETED",
+            "due_date": "2023-02-01",
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "project_id": 1,
+            "name": "Develop Frontend",
+            "description": "Develop the frontend components",
+            "assigned_to": 2,
+            "status": "IN_PROGRESS",
+            "due_date": "2023-06-01",
+            "tenant_id": 1
+        }
+    ],
+    "milestones": [
+        {
+            "id": 1,
+            "project_id": 1,
+            "name": "Phase 1 Complete",
+            "description": "Complete initial phase",
+            "due_date": "2023-03-01",
+            "status": "COMPLETED",
+            "tenant_id": 1
+        }
+    ],
+    "resources": [
+        {
+            "id": 1,
+            "project_id": 1,
+            "name": "Developer",
+            "type": "HUMAN",
+            "cost": 5000,
+            "tenant_id": 1
+        }
+    ]
+}

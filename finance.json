@@ -1,0 +1,58 @@
+{
+    "glAccounts": [
+        {
+            "id": 1,
+            "name": "Cash",
+            "type": "ASSET",
+            "balance": 10000,
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Accounts Receivable",
+            "type": "ASSET",
+            "balance": 5000,
+            "tenant_id": 1
+        },
+        {
+            "id": 3,
+            "name": "Accounts Payable",
+            "type": "LIABILITY",
+            "balance": 3000,
+            "tenant_id": 1
+        }
+    ],
+    "journalEntries": [
+        {
+            "id": 1,
+            "date": "2023-01-01",
+            "description": "Initial cash deposit",
+            "debit_account_id": 1,
+            "credit_account_id": 3,
+            "amount": 10000,
+            "tenant_id": 1
+        }
+    ],
+    "budgets": [
+        {
+            "id": 1,
+            "account_id": 1,
+            "year": 2023,
+            "month": 1,
+            "budgeted_amount": 12000,
+            "actual_amount": 10000,
+            "tenant_id": 1
+        }
+    ],
+    "transactions": [
+        {
+            "id": 1,
+            "account_id": 1,
+            "amount": 10000,
+            "type": "CREDIT",
+            "date": "2023-01-01",
+            "description": "Initial deposit",
+            "tenant_id": 1
+        }
+    ]
+}

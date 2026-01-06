@@ -1,0 +1,110 @@
+{
+    "workflows": [
+        {
+            "id": 1,
+            "name": "Purchase Approval Workflow",
+            "description": "Workflow for approving purchase orders",
+            "entity_type": "PURCHASE_ORDER",
+            "is_active": true,
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Leave Approval Workflow",
+            "description": "Workflow for approving employee leave requests",
+            "entity_type": "LEAVE_REQUEST",
+            "is_active": true,
+            "tenant_id": 1
+        }
+    ],
+    "steps": [
+        {
+            "id": 1,
+            "workflow_id": 1,
+            "name": "Manager Approval",
+            "description": "Approval by department manager",
+            "order": 1,
+            "required_role": "MANAGER",
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "workflow_id": 1,
+            "name": "Finance Approval",
+            "description": "Approval by finance department",
+            "order": 2,
+            "required_role": "FINANCE",
+            "tenant_id": 1
+        },
+        {
+            "id": 3,
+            "workflow_id": 2,
+            "name": "Supervisor Approval",
+            "description": "Approval by immediate supervisor",
+            "order": 1,
+            "required_role": "SUPERVISOR",
+            "tenant_id": 1
+        }
+    ],
+    "transitions": [
+        {
+            "id": 1,
+            "workflow_id": 1,
+            "from_step_id": 1,
+            "to_step_id": 2,
+            "condition": "APPROVED",
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "workflow_id": 1,
+            "from_step_id": 2,
+            "to_step_id": null,
+            "condition": "APPROVED",
+            "tenant_id": 1
+        },
+        {
+            "id": 3,
+            "workflow_id": 2,
+            "from_step_id": 3,
+            "to_step_id": null,
+            "condition": "APPROVED",
+            "tenant_id": 1
+        }
+    ],
+    "approvals": [
+        {
+            "id": 1,
+            "workflow_id": 1,
+            "entity_id": 1,
+            "step_id": 1,
+            "approver_id": 1,
+            "status": "APPROVED",
+            "approved_date": "2023-01-10",
+            "comments": "Approved for purchase",
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "workflow_id": 1,
+            "entity_id": 1,
+            "step_id": 2,
+            "approver_id": 2,
+            "status": "APPROVED",
+            "approved_date": "2023-01-12",
+            "comments": "Finance approval granted",
+            "tenant_id": 1
+        },
+        {
+            "id": 3,
+            "workflow_id": 2,
+            "entity_id": 1,
+            "step_id": 3,
+            "approver_id": 1,
+            "status": "PENDING",
+            "approved_date": null,
+            "comments": "",
+            "tenant_id": 1
+        }
+    ]
+}
